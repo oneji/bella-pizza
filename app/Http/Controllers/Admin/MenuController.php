@@ -36,6 +36,17 @@ class MenuController extends Controller
         return redirect()->route('admin.menu');
     }
 
+    public function deleteCategory($id, Request $request)
+    {
+        $menuCategory = MenuCategory::find($id);
+        $menuCategory->delete();
+
+        // Put the message in session
+        $request->session()->flash('success', 'Menu category has been deleted.');
+
+        return redirect()->route('admin.menu');
+    }
+
     public function addMenuItem(Request $request)
     {
         $validatedData = $request->validate([

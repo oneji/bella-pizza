@@ -14,12 +14,18 @@
                     <div class="tab-pane fade show active" id="v-pills-menu-category" role="tabpanel" aria-labelledby="v-pills-menu-category-tab">
                         <div class="row">
                             <div class="col-sm-6">
-                                @if ($menuCategories->count() > 0)                                
-                                    <div class="list-group">
+                                @if ($menuCategories->count() > 0)
                                         @foreach ($menuCategories as $category)
-                                            <button type="button" class="list-group-item list-group-item-action">{{ $category['category_name'] }}</button>
+                                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                                            {{ $category['category_name'] }}
+                                            <form action="{{ route('admin.menu.categories.delete', [ 'id' => $category['id'] ]) }}" method="POST">
+                                                @csrf
+                                                @method('DELETE')
+                                                <button type="submit" class="btn btn-danger btn-sm">delete</button>
+                                            </form>
+                                        </li>
                                         @endforeach
-                                    </div>                                
+                                    </ul>                                
                                 @else
                                     <div class="alert alert-info" role="alert">
                                         No menu categories added yet.
@@ -31,7 +37,7 @@
                                 <div class="card">
                                     <div class="card-body">
                                         <h5 class="card-title">Add menu categories</h5>
-                                        <form action="{{ route('admin.menu.categories') }}" method="POST">
+                                        <form action="{{ route('admin.menu.categories.save') }}" method="POST">
                                             @csrf
                                             <div class="form-group">
                                                 <label>Category name</label>
