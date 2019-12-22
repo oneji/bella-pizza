@@ -22,9 +22,11 @@ Route::prefix('admin')->namespace('Admin')->as('admin.')->middleware(['auth'])->
     Route::get('/', 'HomeController@get')->name('home');
 
     Route::get('/menu', 'MenuController@get')->name('menu');
-    Route::post('/menu/categories', 'MenuController@addCategory')->name('menu.categories.save');
-    Route::delete('/menu/categories/{id}', 'MenuController@deleteCategory')->name('menu.categories.delete');
-    Route::post('/menu/items', 'MenuController@addMenuItem')->name('menu.items');
+    Route::get('/menu/categories', 'MenuCategoryController@get')->name('menu.categories');
+    Route::post('/menu/categories', 'MenuCategoryController@save')->name('menu.categories.save');
+    Route::delete('/menu/categories/{id}', 'MenuCategoryController@delete')->name('menu.categories.delete');
+    Route::get('/menu/items', 'MenuItemController@get')->name('menu.items');
+    Route::post('/menu/items', 'MenuItemController@save')->name('menu.items.save');
 
 });
 

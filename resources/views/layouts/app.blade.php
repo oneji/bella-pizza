@@ -33,9 +33,7 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav mr-auto">
-                        <li class="nav-item">
-                            <a class="nav-link active" href="{{ route('admin.menu') }}">Menu</a>
-                        </li>
+
                     </ul>
 
                     <!-- Right Side Of Navbar -->
@@ -75,7 +73,19 @@
         </nav>
 
         <main class="py-4">
-            @yield('content')
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-md-2">
+                        <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                            <a class="nav-link {{ Route::currentRouteName() === 'admin.menu.categories' ? 'active' : null }}" href="{{ route('admin.menu.categories') }}" aria-controls="v-pills-menu-category" aria-selected="true">Menu categories</a>
+                            <a class="nav-link {{ Route::currentRouteName() === 'admin.menu.items' ? 'active' : null }}" href="{{ route('admin.menu.items') }}" aria-controls="v-pills-menu-item" aria-selected="false">Menu items</a>
+                          </div>                  
+                    </div>
+                    <div class="col-md-10">
+                        @yield('content')
+                    </div>
+                </div>
+            </div>
         </main>
     </div>
 </body>
