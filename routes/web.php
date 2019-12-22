@@ -21,5 +21,9 @@ Route::prefix('admin')->namespace('Admin')->as('admin.')->middleware(['auth'])->
 
     Route::get('/', 'HomeController@get')->name('home');
 
+    Route::get('/menu', 'MenuController@get')->name('menu');
+    Route::post('/menu/categories', 'MenuController@addCategory')->name('menu.categories');
+    Route::post('/menu/items', 'MenuController@addMenuItem')->name('menu.items');
+
 });
 
