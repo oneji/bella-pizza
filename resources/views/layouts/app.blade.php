@@ -73,19 +73,25 @@
         </nav>
 
         <main class="py-4">
-            <div class="container">
-                <div class="row justify-content-center">
-                    <div class="col-md-2">
-                        <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
-                            <a class="nav-link {{ Route::currentRouteName() === 'admin.menu.categories' ? 'active' : null }}" href="{{ route('admin.menu.categories') }}" aria-controls="v-pills-menu-category" aria-selected="true">Menu categories</a>
-                            <a class="nav-link {{ Route::currentRouteName() === 'admin.menu.items' ? 'active' : null }}" href="{{ route('admin.menu.items') }}" aria-controls="v-pills-menu-item" aria-selected="false">Menu items</a>
-                          </div>                  
-                    </div>
-                    <div class="col-md-10">
-                        @yield('content')
+            @if (Route::currentRouteName() !== 'admin.home')
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-md-2">
+                            <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                                <a class="nav-link" href="{{ route('admin.home') }}" aria-controls="v-pills-menu-category" aria-selected="true">Home</a>
+                                <a class="nav-link {{ Route::currentRouteName() === 'admin.menu.categories' ? 'active' : null }}" href="{{ route('admin.menu.categories') }}" aria-controls="v-pills-menu-category" aria-selected="true">Menu categories</a>
+                                <a class="nav-link {{ Route::currentRouteName() === 'admin.menu.items' ? 'active' : null }}" href="{{ route('admin.menu.items') }}" aria-controls="v-pills-menu-item" aria-selected="false">Menu items</a>
+                            </div>                  
+                        </div>
+                        <div class="col-md-10">
+                            @yield('content')
+                        </div>
                     </div>
                 </div>
-            </div>
+            @else
+                @yield('content')
+            @endif
+            
         </main>
     </div>
 </body>
