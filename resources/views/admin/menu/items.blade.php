@@ -65,7 +65,7 @@
                                  
         @if ($menuItems->count() > 0)
             @foreach ($menuItems as $item)
-                <div class="col-sm-4">   
+                <div class="col-sm-4">
                     <div class="card" style="width: 18rem;">
                         <img class="card-img-top" src="{{ asset($item['cover_image']) }}" alt="Card image cap">
                         <div class="card-body">

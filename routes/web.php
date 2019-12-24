@@ -28,5 +28,8 @@ Route::prefix('admin')->namespace('Admin')->as('admin.')->middleware(['auth'])->
     Route::get('/menu/items', 'MenuItemController@get')->name('menu.items');
     Route::post('/menu/items', 'MenuItemController@save')->name('menu.items.save');
 
+    Route::get('/slides', 'HomeSlideController@get')->name('slides');
+    Route::post('/slides', 'HomeSlideController@upload')->name('slides.upload');
+
 });
 
