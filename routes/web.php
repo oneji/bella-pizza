@@ -30,6 +30,7 @@ Route::prefix('admin')->namespace('Admin')->as('admin.')->middleware(['auth'])->
 
     Route::get('/slides', 'HomeSlideController@get')->name('slides');
     Route::post('/slides', 'HomeSlideController@upload')->name('slides.upload');
+    Route::delete('/slides/{id}', 'HomeSlideController@delete')->name('slides.delete');
 
 });
 
