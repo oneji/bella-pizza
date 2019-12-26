@@ -35,5 +35,8 @@ Route::prefix('admin')->namespace('Admin')->as('admin.')->middleware(['auth'])->
     Route::get('/about', 'AboutController@get')->name('about');
     Route::post('/about', 'AboutController@save')->name('about.save');
 
+    Route::get('/contact', 'ContactController@get')->name('contact');
+    Route::delete('/contact/{id}', 'ContactController@delete')->name('contact.delete');
+
 });
 

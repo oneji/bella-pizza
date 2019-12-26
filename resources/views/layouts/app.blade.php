@@ -83,6 +83,7 @@
                                 <a class="nav-link {{ Route::currentRouteName() === 'admin.slides' ? 'active' : null }}" href="{{ route('admin.slides') }}" aria-controls="v-pills-menu-category" aria-selected="true">Home pages slides</a>
                                 <a class="nav-link {{ Route::currentRouteName() === 'admin.menu.categories' ? 'active' : null }}" href="{{ route('admin.menu.categories') }}" aria-controls="v-pills-menu-category" aria-selected="true">Menu categories</a>
                                 <a class="nav-link {{ Route::currentRouteName() === 'admin.menu.items' ? 'active' : null }}" href="{{ route('admin.menu.items') }}" aria-controls="v-pills-menu-item" aria-selected="false">Menu items</a>
+                                <a class="nav-link {{ Route::currentRouteName() === 'admin.contact' ? 'active' : null }}" href="{{ route('admin.contact') }}" aria-controls="v-pills-menu-item" aria-selected="false">Contact messages</a>
                             </div>                  
                         </div>
                         <div class="col-md-10">

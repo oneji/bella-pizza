@@ -19,6 +19,7 @@
                             <a href="{{ route('admin.slides') }}" class="list-group-item list-group-item-action">Home page slides</a>
                             <a href="{{ route('admin.menu.categories') }}" class="list-group-item list-group-item-action">Menu categories</a>
                             <a href="{{ route('admin.menu.items') }}" class="list-group-item list-group-item-action">Menu items</a>
+                            <a href="{{ route('admin.contact') }}" class="list-group-item list-group-item-action">Contact messages</a>
                           </div>
                     </div>
                 </div>
