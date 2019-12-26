@@ -32,5 +32,8 @@ Route::prefix('admin')->namespace('Admin')->as('admin.')->middleware(['auth'])->
     Route::post('/slides', 'HomeSlideController@upload')->name('slides.upload');
     Route::delete('/slides/{id}', 'HomeSlideController@delete')->name('slides.delete');
 
+    Route::get('/about', 'AboutController@get')->name('about');
+    Route::post('/about', 'AboutController@save')->name('about.save');
+
 });
 
