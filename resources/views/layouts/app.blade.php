@@ -73,7 +73,7 @@
         </nav>
 
         <main class="py-4">
-            @if (Route::currentRouteName() !== 'admin.home')
+            @if (Route::currentRouteName() !== 'admin.home' && Auth::check())
                 <div class="container">
                     <div class="row justify-content-center">
                         <div class="col-md-2">

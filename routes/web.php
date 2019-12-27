@@ -12,6 +12,7 @@
 */
 
 Route::get('/', 'HomeController@index')->name('site.home');
+Route::get('/menu', 'MenuController@get')->name('site.menu');
 
 Auth::routes();
 
