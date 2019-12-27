@@ -19,18 +19,14 @@
             <div class="offer-menu-wrapper">
                 <ul id="filters" class="single-offer-category-filter option-set" data-option-key="filter">
                     @foreach ($menuCategories as $index => $category)
-                        <li class="filter-cat"><a class="{{ $index === 0 ? 'selected' : null }}" href="#filter" data-option-value=".cat{{ $category['id'] }}">{{ $category['category_name'] }}</a></li>
+                        <li class="filter-cat"><a class="{{ $index === 0 ? 'selected' : null }}" href="#filter" data-option-value=".cat{{ $index + 1 }}">{{ $category['category_name'] }}</a></li>
                     @endforeach
-                    {{-- <li class="filter-cat"><a class="selected" href="#filter" data-option-value=".cat1">NY style pizzas</a></li>
-                    <li class="filter-cat"><a href="#filter" data-option-value=".cat2">Sweat pizzas</a></li>
-                    <li class="filter-cat"><a href="#filter" data-option-value=".cat3">Pasta</a></li>
-                    <li class="filter-cat"><a href="#filter" data-option-value=".cat4">Coffee & Tea</a></li> --}}
                 </ul>
 
                 <div class="offer-menu-items">
                     @foreach ($menuCategories as $index => $category)
                         @foreach ($category['menu_items'] as $idx => $item)
-                            <div class="single-offer-category-item isotope-item cat{{ $category['id'] }}">
+                            <div class="single-offer-category-item isotope-item cat{{ $index + 1 }}">
                                 <div class="offer-menu2-item-single">
                                     <img class="offer-menu2-frame" src="{{ asset('site/images/frame.png') }}" />
                                     <div class="offer-menu2-shadow"></div>

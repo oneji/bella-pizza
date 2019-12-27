@@ -14,6 +14,8 @@
 Route::get('/', 'HomeController@index')->name('site.home');
 Route::get('/menu', 'MenuController@get')->name('site.menu');
 Route::get('/about', function() { return view('site.about'); })->name('site.about');
+Route::get('/contact', 'ContactController@get')->name('site.contact');
+Route::post('/contact', 'ContactController@save')->name('site.contact.save');
 
 Auth::routes();
 
