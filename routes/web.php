@@ -13,6 +13,7 @@
 
 Route::get('/', 'HomeController@index')->name('site.home');
 Route::get('/menu', 'MenuController@get')->name('site.menu');
+Route::get('/about', function() { return view('site.about'); })->name('site.about');
 
 Auth::routes();
 

@@ -35,7 +35,7 @@
     <div class="animsition global-wrapper">
         <div id="header" class="header-wrapper">
             <div class="logo">
-                <a href="index.html" title="Bella Pizza"><img class="logoImage" src="{{ asset('site/images/logo.png') }}" alt="Bella Pizza logo" /></a>
+                <a href="{{ route('site.home') }}" title="Bella Pizza"><img class="logoImage" src="{{ asset('site/images/logo.png') }}" alt="Bella Pizza logo" /></a>
                 <div class="clear"></div>
             </div>
             @component('site.components.menu')
@@ -47,8 +47,8 @@
             @endcomponent
         </div>
 
-        @component('site.components.mobile-menu')
-        @endcomponent
+        {{-- @component('site.components.mobile-menu')
+        @endcomponent --}}
 
         <div class="container-wrapper">
             @yield('content')
