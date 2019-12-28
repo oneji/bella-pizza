@@ -940,7 +940,7 @@ span.page-title-icon:before {
     display: block;
     position: fixed;
     z-index: 2;
-    padding: 0 30px;
+    padding: 0;
 }
 
 body.admin-bar .header-wrapper {
@@ -1264,7 +1264,7 @@ ul.sf-menu li ul li a {
 	position: relative;
 	cursor: pointer;
 	color: #fff;
-	float: none;
+	float: right;
 	height: 26px;
 	margin-right: 0;
 	margin-top: 10px;
@@ -1360,7 +1360,8 @@ ul.sf-menu li ul li a {
 .footer {
     position: absolute;
     bottom: 50px;
-	padding: 0 30px 0 0;
+	padding: 0 30px;
+	width: 100%;
 }
 
 .footer-socials ul.socials-sh {

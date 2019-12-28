@@ -47,15 +47,14 @@
             @endcomponent
         </div>
 
-        {{-- @component('site.components.mobile-menu')
-        @endcomponent --}}
+        @component('site.components.mobile-menu')
+        @endcomponent
 
         <div class="container-wrapper">
             @yield('content')
-            <!-- END REVOLUTION SLIDER -->
             <div class="clear"></div>
         </div>
-        <!-- end container-wrapper -->
+        
         @component('site.components.mobile-footer')
         @endcomponent
     </div>

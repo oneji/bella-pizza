@@ -9,7 +9,5 @@
             </li>
         </ul>
     </div>
-    <div class="footer-content">
-        @ 2017 Bella Pizza. Made by <a href="http://oneji.github.io/portfolio" title="Web developer">OneJI</a>.
-    </div>
+    <div class="footer-content">© {{ now()->year }} Bella Pizza</div>
 </div>
